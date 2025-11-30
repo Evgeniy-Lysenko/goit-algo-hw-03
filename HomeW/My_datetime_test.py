@@ -172,11 +172,22 @@
 # future_date = now - timedelta(days=10)  # Віднімаємо 10 днів від поточної дати
 # print(future_date)  
 
-from datetime import datetime, timedelta
+# from datetime import datetime, timedelta
 
-seventh_day_2020 = datetime(year=2020, month=1, day=7, hour=14)
-four_weeks_interval = timedelta(weeks=4)
+# seventh_day_2020 = datetime(year=2020, month=1, day=7, hour=14)
+# four_weeks_interval = timedelta(weeks=4)
 
-print(seventh_day_2020 + four_weeks_interval)  # 2020-02-04 14:00:00
-print(seventh_day_2020 - four_weeks_interval)  # 2019-12-10 14:00:00
+# print(seventh_day_2020 + four_weeks_interval)  # 2020-02-04 14:00:00
+# print(seventh_day_2020 - four_weeks_interval)  # 2019-12-10 14:00:00
 
+from datetime import datetime
+
+# Створення об'єкта datetime
+date = datetime(year=2025, month=12, day=1)
+
+# Отримання порядкового номера
+ordinal_number = date.toordinal()
+print(f"Порядковий номер дати {date} становить {ordinal_number}")
+# Відновлення дати з порядкового номера
+restored_date = datetime.fromordinal(ordinal_number)
+print(f"Відновлена дата з порядкового номера {ordinal_number} становить {restored_date}")
